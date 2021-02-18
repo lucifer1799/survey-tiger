@@ -6,7 +6,7 @@ import "./createSurvey.css"
 function CreateSurvey(props) {
   const [btn, setbtn] = useState(false);
   const [slct, setslct] = useState(false);
-  const [val, setval] = useState("do select");
+  const [val, setval] = useState("Select Question Type");
   const [array, setarray] = useState([{ text: "" }]);
   const [surveyList, setsurveyList] = useState([]);
   const [question, setquestion] = useState("");
@@ -37,7 +37,7 @@ function CreateSurvey(props) {
     let copysurveyList = [...surveyList];
     copysurveyList.push(obj);
     setsurveyList(copysurveyList);
-    setval("do-select");
+    setval("Select Question Type");
     setarray([{ text: "" }]);
     setquestion("");
   };
@@ -51,7 +51,7 @@ function CreateSurvey(props) {
     let copysurveyList = [...surveyList];
     copysurveyList.push(obj);
     setsurveyList(copysurveyList);
-    setval("do-select");
+    setval("Select Question Type");
     setarray([{ text: "" }]);
     setquestion("");
     setIsPublished(false);
@@ -72,7 +72,7 @@ function CreateSurvey(props) {
                 setarray([{ text: "Yes" }, { text: "No" }]);
             }}
           >
-            <option value="do-select">do select</option>
+            <option value="do-select">Select Question Type</option>
             <option value="multi-select">multi-select</option>
             <option value="single-select">single-select</option>
           </select>

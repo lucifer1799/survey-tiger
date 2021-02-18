@@ -53,12 +53,12 @@ TakeSurvey.defaultProps={
   surveyList:[
     {
       questionType:'multi-select',
-      question:'Which of the following app do you have in your phone',
+      question:'Which of the following app do you have in your phone ?',
       answer:[{text:'whatsapp'},{text:'facebook'},{text:'instagram'},{text:'tinder'}]
     },
     {
       questionType:'single-choice',
-      question:'are you using twitter ?',
+      question:'Do you have Linkedin install on your phone ?',
       answer:[{text:'yes'},{text:'no'}]
     }
   ]
