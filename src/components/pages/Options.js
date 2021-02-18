@@ -16,9 +16,9 @@ function Options(props) {
         placeholder="Type answer here"
       />
 
-      <span className="input-group-text" id="basic-addon1" onClick={props.array.length < 4 ? props.handleArray : null}>+
+      <span className="input-group-text spanred" id="basic-addon1" onClick={props.array.length < 4 ? props.handleArray : null}>+
       </span>
-      <span className="input-group-text" id="basic-addon1" onClick={(event) =>
+      <span className="input-group-text spanred" id="basic-addon1" onClick={(event) =>
             props.handleNegative ? props.handleNegative(event, props.id) : null
           }>-</span>
     </div>
