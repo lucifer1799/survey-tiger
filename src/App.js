@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Header from "./components/Header";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+} from "react-router-dom";
+import CreateSurvey from './components/pages/CreateSurvey'
+import TakeSurvey from './components/pages/TakeSurvey'
+import Thankyou from './components/pages/Thankyou'
+import Links from './Links'
+import {useState} from "react"
 function App() {
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className='App'>
+        
+        <Switch>
+          <Route path="/createsurvey" exact>
+            <Header />
+            <CreateSurvey  />
+          </Route>
+          <Route path="/takesurvey" exact>
+            <Header />
+            <TakeSurvey />
+          </Route>
+          <Route path="/" exact>
+            <Header />
+            <Links />
+          </Route>
+          <Route path="/createSurvey/publish" exact>
+            <Header />
+            <TakeSurvey />
+          </Route>
+          <Route path="/takesurvey/Thankyou" exact>
+            <Header />
+            <Thankyou />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
